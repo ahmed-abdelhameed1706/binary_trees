@@ -37,25 +37,6 @@ size_t binary_tree_height(const binary_tree_t *tree)
 }
 
 /**
- * power - calculates the power of a number
- * @base: is the base
- * @exponent: is the number
- *
- * Return: the base to the power of the exponent
- */
-size_t power(size_t base, size_t exponent)
-{
-	size_t result = 1;
-
-	for (size_t i = 0; i < exponent; ++i)
-	{
-		result *= base;
-	}
-
-	return (result);
-}
-
-/**
  * binary_tree_is_perfect - checks if binary tree is perfect
  * @tree: root of the tree
  *
@@ -70,7 +51,7 @@ int binary_tree_is_perfect(const binary_tree_t *tree)
 
 	height = binary_tree_height(tree);
 	size = binary_tree_size(tree);
-	perfect_nodes = (power(2, height + 1) - 1);
+	perfect_nodes = ((1 << (height + 1)) - 1);
 
 	if (size == perfect_nodes)
 		return (1);
