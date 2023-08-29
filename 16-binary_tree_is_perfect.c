@@ -10,7 +10,7 @@ size_t binary_tree_size(const binary_tree_t *tree)
 {
 	if (tree == NULL)
 		return (0);
-	
+
 	return (1 + binary_tree_size(tree->left) + binary_tree_size(tree->right));
 }
 
@@ -43,14 +43,16 @@ size_t binary_tree_height(const binary_tree_t *tree)
  *
  * Return: the base to the power of the exponent
  */
-size_t power(size_t base, size_t exponent) {
-    size_t result = 1;
+size_t power(size_t base, size_t exponent)
+{
+	size_t result = 1;
 
-    for (size_t i = 0; i < exponent; ++i) {
-        result *= base;
-    }
+	for (size_t i = 0; i < exponent; ++i)
+	{
+		result *= base;
+	}
 
-    return result;
+	return (result);
 }
 
 /**
